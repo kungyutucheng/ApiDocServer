@@ -1,0 +1,12 @@
+/api/.idea/
+/api/target/
+/api/.mvn/
+/api/mvnw/
+/api/mvnw.cmd/
+/common/.idea/
+/common/target/
+/core/.idea/
+/core/target/
+/core/.mvn/
+/core/mvnw/
+/core/mvnw.cmd/

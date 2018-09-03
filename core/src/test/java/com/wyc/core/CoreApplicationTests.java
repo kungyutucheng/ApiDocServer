@@ -1,4 +1,4 @@
-package com.wcy.core;
+package com.wyc.core;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

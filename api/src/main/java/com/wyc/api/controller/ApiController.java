@@ -14,11 +14,7 @@ public class ApiController {
 
   @Autowired private ApiService apiService;
 
-  @RequestMapping(
-    value = "/insert",
-    method = RequestMethod.POST,
-    produces = "text/plain;charset=utf-8"
-  )
+  @RequestMapping(value = "/insert", method = RequestMethod.POST)
   @ResponseBody
   public Map<String, Object> insert(@RequestBody String content) {
     Map<String, Object> resultMap = new HashMap<String, Object>();

@@ -1,5 +1,6 @@
 package com.wyc.api.hessian;
 
+import com.wyc.service.ApiService;
 import com.wyc.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -23,5 +24,10 @@ public class ApiConfigForHessianProxy {
   @Bean
   public HessianProxyFactoryBean helloWorldService() {
     return buildHessianProxyFactoryBean(HelloWorldService.class, "helloWorldService");
+  }
+
+  @Bean
+  public HessianProxyFactoryBean apiService() {
+    return buildHessianProxyFactoryBean(ApiService.class, "apiService");
   }
 }

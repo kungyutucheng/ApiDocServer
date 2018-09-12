@@ -11,14 +11,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.wyc.api</groupId>
+    <groupId>com.wyc</groupId>
     <artifactId>maven-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <modules>
-        <module>../api</module>
-        <module>../core</module>
-    </modules>
+    <!--<modules>-->
+    <!--<module>../api</module>-->
+    <!--<module>../core</module>-->
+    <!--<module>../manager</module>-->
+    <!--</modules>-->
     <packaging>pom</packaging>
 
     <name>maven-parent</name>
@@ -33,16 +34,7 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <!--<exclusions>-->
-            <!--<exclusion>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-logging</artifactId>-->
-            <!--</exclusion>-->
-            <!--</exclusions>-->
-        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -67,6 +59,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
         </dependency>
         <!--<dependency>-->
         <!--<groupId>org.springframework.boot</groupId>-->

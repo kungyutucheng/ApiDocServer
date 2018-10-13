@@ -53,11 +53,7 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <!--<scope>provided</scope>-->
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>javax.servlet</groupId>-->
-        <!--<artifactId>servlet-api</artifactId>-->
-        <!--<version>2.5</version>-->
-        <!--</dependency>-->
+      
     </dependencies>
 
     <build>
@@ -67,25 +63,25 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <resources>
-            <!-- 打包时将jsp文件拷贝到META-INF目录下-->
-            <resource>
-                <!-- 指定resources插件处理哪个目录下的资源文件 -->
-                <directory>src/main/webapp</directory>
-                <!--注意此次必须要放在此目录下才能被访问到-->
-                <targetPath>jsp</targetPath>
-                <includes>
-                    <include>**/**</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/**</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
+        <!--<resources>-->
+        <!--&lt;!&ndash; 打包时将jsp文件拷贝到META-INF目录下&ndash;&gt;-->
+        <!--<resource>-->
+        <!--&lt;!&ndash; 指定resources插件处理哪个目录下的资源文件 &ndash;&gt;-->
+        <!--<directory>src/main/webapp</directory>-->
+        <!--&lt;!&ndash;注意此次必须要放在此目录下才能被访问到&ndash;&gt;-->
+        <!--<targetPath>jsp</targetPath>-->
+        <!--<includes>-->
+        <!--<include>**/**</include>-->
+        <!--</includes>-->
+        <!--</resource>-->
+        <!--<resource>-->
+        <!--<directory>src/main/resources</directory>-->
+        <!--<includes>-->
+        <!--<include>**/**</include>-->
+        <!--</includes>-->
+        <!--<filtering>false</filtering>-->
+        <!--</resource>-->
+        <!--</resources>-->
     </build>
 
 

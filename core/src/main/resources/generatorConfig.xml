@@ -11,7 +11,7 @@
         <!-- sqlMapGenerator targetPackage="com.zkbc.core.dao.map" targetProject="core" /-->
         <javaClientGenerator targetPackage="com.wyc.core.map" targetProject="../core/src/main/java"
                              type="ANNOTATEDMAPPER"/>
-        <table tableName="role_permission">
+        <table tableName="sx_product">
         </table>
     </context>
 </generatorConfiguration>

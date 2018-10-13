@@ -11,16 +11,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApiServiceImpl implements ApiService {
 
-  @Autowired private MongoTemplate mongoTemplate;
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
-  @Override
-  public void insert(Object object) {
-    mongoTemplate.insert(object, "api");
-  }
+    @Override
+    public void insert(Object object) {
+        mongoTemplate.insert(object, "api");
+    }
 
-  @Override
-  public JSONObject query(String url, Integer type) {
-    Query query = new Query(Criteria.where("url").is(url));
-    return mongoTemplate.findOne(query, JSONObject.class, "api");
-  }
+    @Override
+    public JSONObject query(String url, Integer type) {
+        Criteria criteria = new Criteria();
+        criteria.and("url").is(url);
+        criteria.and("type").is(type);
+        Query query = new Query(criteria);
+//    Criteria criteria = Criteria.where("url").is(url).andOperator(Criteria.where("type").is(type));
+//        query.addCriteria(criteria);
+        return mongoTemplate.findOne(query, JSONObject.class, "api");
+    }
 }

@@ -1,5 +1,7 @@
 package com.wyc.manager.controller;
 
+import com.alibaba.fastjson.JSONObject;
+import com.wyc.entity.User;
 import com.wyc.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -22,6 +24,8 @@ public class LoginController {
   @RequestMapping(value = "/loginPage")
   public ModelAndView loginPage() {
     ModelAndView modelAndView = new ModelAndView("login");
+    User user = userService.queryUserByUserName("123");
+    logger.info(JSONObject.toJSONString(user));
     return modelAndView;
   }
 

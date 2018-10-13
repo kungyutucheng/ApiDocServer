@@ -24,7 +24,9 @@ public @interface Date {
 
     String equal() default "";
 
-    String format() default "";
+    String pattern();
+
+    String message();
 
 
 }

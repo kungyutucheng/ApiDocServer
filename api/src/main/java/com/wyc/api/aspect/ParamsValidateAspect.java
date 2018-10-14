@@ -101,7 +101,7 @@ public class ParamsValidateAspect {
             String equal = date.equal();
             String message = date.message();
             String defaultPattern = "yyyy-MM-dd HH:mm:ss";
-            if (StringUtils.isNotBlank(format)) {
+            if (StringUtils.isNotBlank(pattern)) {
 
                 SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
                 try {

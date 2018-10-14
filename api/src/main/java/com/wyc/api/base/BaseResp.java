@@ -18,11 +18,14 @@ public class BaseResp {
      */
     private String msg;
 
-    public static BaseResp ERROR_SYSTEM() {
-        BaseResp resp = new BaseResp();
-        resp.setCode(ResponseCode.ERROR_SYSTEM.getCode());
-        resp.setMsg(ResponseCode.ERROR_SYSTEM.getMsg());
-        return resp;
+    /**
+     * 返回内容
+     */
+    private Object result;
+
+    public void errorSystem() {
+        this.code = ResponseCode.ERROR_SYSTEM.getCode();
+        this.msg = ResponseCode.ERROR_SYSTEM.getMsg();
     }
 
 }

@@ -261,7 +261,7 @@ public class ParamsValidateAspect {
             String fieldName = field.getName();
             if (jsonObject.get(fieldName) == null) {
                 resp.setCode(ResponseCode.ERROR_PARAMS.getCode());
-                resp.setMsg(ResponseCode.ERROR_PARAMS.getMsg());
+                resp.setMsg(message);
                 return resp;
             }
 
